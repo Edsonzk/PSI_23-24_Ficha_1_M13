@@ -29,10 +29,10 @@ Considera que todas as instruções ocorrem fora das classes presentes no diagra
 
 ![UML](uml.png)
 
-* `Animal animal = new Cao();` - invalido, porque deveria ser "Animal animal = new Animal();".
-* `Gato gato = new Cao();` - invalido, porque deveria ser "Gato gato = new Gato();".
-* `Gato gato = new Animal();` - invalido, porque deveria ser "Animal gato = new Animal();".
+* `Animal animal = new Cao();` - invalido, porque deveria ser "Animal cao = new Cao();".
+* `Gato gato = new Cao();` - invalido, porque deveria ser "Animal gato = new Gato();".
+* `Gato gato = new Animal();` - valido, porque o gato esta sendo criado com as propriedades de um gato.
 * `a.Ladrar(); // 'a' é uma instância de Animal` - invalido, porque 'a' deveria ser uma instância de Cao.
 * `c.Comer(); // 'c' é uma instância de Cao` - invalido, porque 'c' deveria ser uma instância de Animal.
-* `float x = g.Energia; // 'g' é uma instância de Gato` - invalido, porque 'g' deveria ser uma instância de Animal.
+* `float x = g.Energia; // 'g' é uma instância de Gato` - invalido, porque Energia é privada da classe Animal.
 * `Console.WriteLine(g.Nome); // 'g' é uma instância de Gato` - invalido, porque 'g' deveria ser uma instância de Animal.
